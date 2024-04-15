@@ -1,10 +1,16 @@
-import { ApplicationConfig } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { HttpClient } from '@angular/common/http';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslatesModule } from './core/translate/translate.module';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes)],
+  providers: [
+    importProvidersFrom([
+      TranslatesModule
+    ]),
+    provideRouter(routes),
+    provideHttpClient(),
+  ],
 };
