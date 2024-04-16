@@ -1,0 +1,29 @@
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.home_title {
+    align-self: center;
+    margin: 40px 0;
+    color: white;
+}
+
+.home_button {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.home_button button {
+    color: white;
+    background-color: blueviolet;
+    border: 3px solid blueviolet;
+    padding: 15px 10px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.home_button button:hover {
+    border: 3px solid greenyellow;
+}

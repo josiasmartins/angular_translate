@@ -14,9 +14,10 @@ import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { HttpClient } from "@angular/common/http";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
-export function createTranslateLoader(http: HttpClient) {
+export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
 }
+
 
 @NgModule({
     imports: [
@@ -24,7 +25,7 @@ export function createTranslateLoader(http: HttpClient) {
             defaultLanguage: "en-us",
             loader: {
                 provide: TranslateLoader,
-                useFactory: createTranslateLoader,
+                useFactory: HttpLoaderFactorys,
                 deps: [HttpClient]
             }
         })

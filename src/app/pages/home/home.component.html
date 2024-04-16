@@ -1,1 +1,8 @@
-<p style="color: wheat;">home works!</p>
+<div class="home">
+    <h1 class="home_title">{{ "pages.home.title" | translate }}</h1>
+
+    <div class="home_button">
+        <button (click)="changeTranslate('en-us')">Inglês</button>
+        <button (click)="changeTranslate('pt-br')">Português</button>
+    </div>
+</div>
