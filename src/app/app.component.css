@@ -22,6 +22,7 @@
     width: 150px;
     background-color: blueviolet;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .home_button button:hover {
